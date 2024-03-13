@@ -1,12 +1,11 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
+
+import Footer from '../src/Components/Footer/footer.css'
 import './App.css'
 
 function App() {
-
-  return (
-   
-  )
+  <Footer />
 }
 
 export default App
