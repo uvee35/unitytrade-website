@@ -1,8 +1,7 @@
 import Technology from "../src/assets/Images/technology.jpg";
 import Jewellery from "../src/assets/Images/jewellery.jpg";
-
+import Clothing from "../src/assets/Images/clothes.jpg";
 import {
-  RxCrop,
   RxDesktop,
   RxPencil2,
   RxReader,
@@ -19,7 +18,8 @@ export const ServiceData = [
   },
   {
     icon: RxPencil2,
-    title: "Branding",
+    title: "Clothing",
+    backgroundImage: Clothing,
   },
   {
     icon: RxDesktop,
