@@ -1,0 +1,26 @@
+/* Navbar.css */
+.navbar {
+  background-color: #293139; /* Dark background color */
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+  color: #ffffff !important; /* White text color */
+}
+
+.navbar-brand:hover,
+.navbar-nav .nav-link:hover {
+  color: #ffffff !important; /* White text color on hover */
+}
+
+.navbar-toggler-icon {
+  background-color: #ffffff; /* White color for the toggle icon */
+}
+
+.navbar-toggler {
+  border-color: #ffffff; /* White color for the toggle button border */
+}
+
+.navbar-toggler:hover {
+  background-color: #ffffff; /* White background color on hover */
+}
