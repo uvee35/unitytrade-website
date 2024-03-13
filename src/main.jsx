@@ -11,10 +11,6 @@ import './index.css';
 // import './index.css'
 // >>>>>>> main:src/main.jsx
 // =======
-import App from './App.jsx'
-import './index.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 // >>>>>>> 6cdea70 (added bootstrap CSS to Main.jsx)
 
 ReactDOM.createRoot(document.getElementById('root')).render(
