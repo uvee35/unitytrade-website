@@ -5,7 +5,7 @@
   --font: 'Roboto', sans-serif;
   --font-weight: normal;
   --font-style: normal;
- 
+  --button-color: #5532FA;
 }
 
 @font-face {
@@ -16,9 +16,8 @@
 }
 
 body {
-background-color: var(--main-background-color);
-color: var(--text-color);
-font-weight: var(--font-weight);
-
+  background-color: var(--main-background-color);
+  color: var(--text-color);
+  font-weight: var(--font-weight);
 }
 
