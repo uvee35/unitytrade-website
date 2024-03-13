@@ -1,4 +1,3 @@
-import React from 'react'
 import React, { useState } from 'react';
 
 function Contact() {
@@ -11,6 +10,9 @@ const [formData, setFormData] = useState({
  }
  
 return (
+  <>
+  <p>Welcome to Unity Trade! Our dedicated customer service team is here to help you with any questions or concerns you may have. Please use the form below to get in touch with us or find our contact information below.</p>
+  <br></br>
     <div className="container mt-5">
       <button onClick={toggleForm} className="btn btn-primary">
         {showForm ? 'Hide Contact Form' : 'Show Contact Form'}
@@ -33,6 +35,14 @@ return (
         </form>
       )}
     </div>
+<br></br>
+<br></br>
+    <div>
+      <h1>Contact Us Here:</h1>
+      <h3>Phone: 123-456-7890</h3>
+      <h3>Email: 0zP7d@example.com</h3>
+    </div>
+  </>
   )
 }
 
