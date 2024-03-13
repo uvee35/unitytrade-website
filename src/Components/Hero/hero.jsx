@@ -12,4 +12,4 @@ const HeroSection = () => {
     );
 }
 
-export default hero
+export default HeroSection
