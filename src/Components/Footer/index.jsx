@@ -3,22 +3,22 @@ import React from 'react'
 
 function Footer() {
     return (
-        <footer className='footertext'>
-                <p>© 2022 UnityTrade</p>
-                <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Use</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-                <div>
-                    <p>Follow Us</p>
-                    <ul>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Instagram</a></li>
-                    </ul>
-                </div>
-
+        <footer className='footertext container-fluid d-flex'>
+            <div id='footerleft' className='col-6'>
+            © 2024 UnityTrade.com Ltd. |
+            <a href="#"> Terms of Use </a>
+            |
+            <a href="#"> Privacy Policy </a>
+            |
+            <a href="#"> Contact Us </a> 
+            </div>
+            <div id='footerright' className='text-end col-6'>
+                <a href="https://www.facebook.com" target='_blank'> Facebook </a>
+                |
+                <a href="https://www.twitter.com" target='_blank'> Twitter </a>
+                |
+                <a href="https://www.instagram.com" target='_blank'> Instagram </a>
+            </div>
         </footer>
     )
 }
