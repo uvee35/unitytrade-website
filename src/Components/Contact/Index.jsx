@@ -5,9 +5,7 @@ function Contact() {
  
 return (
   <>
-  <p>Want to join our community of sellers or just want to ask some questions about the process? Click the button below and one of our team members will get back to you shortly.</p>
   <ContactForm />
-  <br></br>
     
 <br></br>
 <br></br>
