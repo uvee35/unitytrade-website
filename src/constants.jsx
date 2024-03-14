@@ -1,6 +1,7 @@
-import Technology from "../src/assets/Images/technology.jpg";
+import Technology from "../src/assets/Images/tech.jpg";
 import Jewellery from "../src/assets/Images/jewellery.jpg";
 import Clothing from "../src/assets/Images/clothes.jpg";
+import tv from "../src/assets/Images/tv.jpg";
 import {
   RxDesktop,
   RxPencil2,
@@ -29,7 +30,8 @@ export const ServiceData = [
   },
   {
     icon: RxReader,
-    title: "Seo",
+    title: "Tv",
+    backgroundImage: tv,
   },
   {
     icon: RxAccessibility,
