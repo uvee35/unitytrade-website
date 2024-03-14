@@ -1,0 +1,19 @@
+.container{
+    max-width: 500px !important;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-title{
+    text-align: start;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+#email{
+    text-decoration: underline;
+}
+
+#email:hover{
+   color: blue;
+}
