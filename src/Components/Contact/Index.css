@@ -1,13 +1,19 @@
 .container{
-    max-width: 500px !important;
+    width: 95% !important;
     margin: 0 auto;
     text-align: left;
+    padding-bottom: 20px;
 }
 
 .contact-title{
     text-align: start;
     font-weight: bolder;
     font-size: 20px;
+    padding-bottom: 5px;
+}
+
+.contact-info{
+    width: 50%;
 }
 
 #email{
