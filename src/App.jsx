@@ -5,7 +5,8 @@ import './App.css';
 import Contact from './Components/Contact/Index.jsx';
 import CarouselSlider from "./Components/Carousel/carousel.jsx";
 import HeroSection from './Components/Hero/hero.jsx';
-import Navbar from './Components/Navbar/Navbar.jsx';
+// import Navbar from './Components/Navbar/Navbar.jsx';
+import DialogflowChat from './Components/Chatbot/chatbot.jsx';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <HeroSection />
           <CarouselSlider />
           <Contact />
+          <DialogflowChat />
         </main>
         <Footer />
       </div>
