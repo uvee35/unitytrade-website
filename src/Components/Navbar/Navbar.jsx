@@ -1,26 +1,46 @@
-// src/Navbar.js
-import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import NavbarBootstrap from 'react-bootstrap/Navbar'; // Changed the name here
-import './Navbar.css';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import "./Navbar.css";
+import logo from "./logo.png";
+import cartIcon from "./cart_icon.png";
 
-export default function CustomNavbar() { // Changed the name here
+const Navbar = () => {
+  const [menu, setMenu] = useState("shop");
   return (
-    <NavbarBootstrap expand="lg" className="bg-body-tertiary">
-      <Container>
-        <NavbarBootstrap.Brand href="#home">Corporate</NavbarBootstrap.Brand>
-        <NavbarBootstrap.Toggle aria-controls="basic-navbar-nav" />
-        <NavbarBootstrap.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#categories">Categories</Nav.Link> {/* Corrected the spelling of "Categories" */}
-            <Nav.Link href="#sign-in">Sign in</Nav.Link>
-            <Nav.Link href="#register">Register</Nav.Link>
-            <Nav.Link href="#contact">Contact</Nav.Link> {/* Corrected the spelling of "Contact" */}
-          </Nav>
-        </NavbarBootstrap.Collapse>
-      </Container>
-    </NavbarBootstrap>
+    <div className='navbar'>
+      <div className='nav-logo'>
+        <img src={logo} alt="" />
+        <p>unitytrade-website</p>
+      </div>
+      <ul>
+        <li onClick={() => { setMenu("shop") }}>
+          <Link style={{textDecoration:'none'}} to='/'>Shop</Link>
+          {menu === "shop" ? <></> : null}
+        </li>
+        <li onClick={() => { setMenu("categories") }}>
+          <Link style={{textDecoration:'none'}} to='/categories'>Categories</Link> 
+          {menu === "categories" ? <></> : null} 
+        </li>
+        <li onClick={() => { setMenu("sign in") }}>
+          <Link style={{textDecoration:'none'}} to='/signin'>Sign in</Link> 
+          {menu === "sign in" ? <></> : null} 
+        </li>
+        <li onClick={() => { setMenu("register") }}>
+          <Link style={{textDecoration:'none'}} to='/register'>Register</Link> 
+          {menu === "register" ? <></> : null} 
+        </li>
+        <li onClick={() => { setMenu("contact") }}>
+          <Link style={{textDecoration:'none'}} to='/contact'>Contact</Link> 
+          {menu === "contact" ? <></> : null} 
+        </li>
+      </ul>
+      <div className='nav-login-cart'>
+        <Link to='/login'><button>Login</button></Link>
+       <Link to='/cart'> <img src={cartIcon} alt='' /></Link>
+        <div className='nav-cart-count'></div>
+      </div>
+    </div>
   );
 }
+
+export default Navbar;
