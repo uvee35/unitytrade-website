@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-import "./Navbar.css";
-import logo from "./logo.png";
-import cartIcon from "./cart_icon.png";
+import "../Navbar/navbar.css";
+import logo from "../../assets/Images/logo.png";
+import cartIcon from "../../assets/Images/cart_icon.png";
 
 const Navbar = () => {
   const [menu, setMenu] = useState("shop");
@@ -10,7 +10,7 @@ const Navbar = () => {
     <div className='navbar'>
       <div className='nav-logo'>
         <img src={logo} alt="" />
-        <p>unitytrade-website</p>
+        <p>Unitytrade</p>
       </div>
       <ul>
         <li onClick={() => { setMenu("shop") }}>
