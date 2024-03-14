@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-import "../Navbar/navbar.css";
+import "./Navbar.css";
+
 import logo from "../../assets/Images/logo.png";
 import cartIcon from "../../assets/Images/cart_icon.png";
 
@@ -15,29 +16,29 @@ const Navbar = () => {
       <ul>
         <li onClick={() => { setMenu("shop") }}>
           <Link style={{textDecoration:'none'}} to='/'>Shop</Link>
-          {menu === "shop" ? <></> : null}
+          {menu === "shop" ? <hr/>:<></>}
         </li>
         <li onClick={() => { setMenu("categories") }}>
           <Link style={{textDecoration:'none'}} to='/categories'>Categories</Link> 
-          {menu === "categories" ? <></> : null} 
+          {menu === "categories" ? <hr/>:<></>}
         </li>
         <li onClick={() => { setMenu("sign in") }}>
           <Link style={{textDecoration:'none'}} to='/signin'>Sign in</Link> 
-          {menu === "sign in" ? <></> : null} 
+          {menu === "sign in" ? <hr/>:<></>}
         </li>
         <li onClick={() => { setMenu("register") }}>
           <Link style={{textDecoration:'none'}} to='/register'>Register</Link> 
-          {menu === "register" ? <></> : null} 
+          {menu === "register" ? <hr/>:<></>}
         </li>
         <li onClick={() => { setMenu("contact") }}>
           <Link style={{textDecoration:'none'}} to='/contact'>Contact</Link> 
-          {menu === "contact" ? <></> : null} 
+          {menu === "contact" ? <h/>:<></>}
         </li>
       </ul>
       <div className='nav-login-cart'>
         <Link to='/login'><button>Login</button></Link>
        <Link to='/cart'> <img src={cartIcon} alt='' /></Link>
-        <div className='nav-cart-count'></div>
+        <div className='nav-cart-count'>0</div>
       </div>
     </div>
   );

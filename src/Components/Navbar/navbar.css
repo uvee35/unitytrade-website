@@ -1,6 +1,6 @@
 /* Navbar.css */
 .navbar {
-  background-color: #293139; 
+  background-color: #246177; 
   display: flex;
   justify-content: space-around;
   padding: 16px;
@@ -12,7 +12,7 @@
   gap: 10px;
 }
 .nav-logo p{
-  color: #171717;
+  color: #000000;
   font-size: 38px;
   font-weight: 600;
 }
@@ -21,8 +21,8 @@
   align-items: center;
   list-style: none;
   gap: 50px;
-  color: #626262;
-  font-size: 20px;
+  color: #000000;
+  font-size: 35px;
   font-weight: 500;
 }
 .nav menu li{
@@ -38,12 +38,12 @@
   width: 80%;
   height: 3px;
   border-radius: 10px;
-  background: #482a2a;
+  background: #6c3d3d;
 }
-.nav-login -cart{
+.nav-login-cart{
   display: flex;
   align-items: center;
-  gap: 45px;
+  gap: 40px;
 
 }
 .nav-login -cart button{
