@@ -5,25 +5,32 @@
   padding: 10px;
 }
 
+.logo-img:hover {
+  transform: scale(1.1); /* Increase the size by 10% on hover */
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
 .nav-links ul {
   list-style-type: none;
   padding: 0;
   display: flex;
+  
 }
 
 .nav-links li {
-  margin-right: 20px;
+  margin-right: 40px;
   margin-top: 9px;
+  
 }
 
 .nav-links a {
   text-decoration: none;
   color: #f6f6f6;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 25px;
 }
 
-.nav-links a.active {
+.nav-links a:hover {
   color: #007bff;
 
 }
