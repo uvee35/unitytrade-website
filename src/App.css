@@ -1,6 +1,6 @@
 :root {
-  --main-background-color: #f0f0f0;
-  --text-color: #333;
+  --main-background-color: radial-gradient(125% 125% at 50% 10%, #000 40%, #63e 100%);
+  --text-color: #fdf6f6;
   --primary-color: #007bff;
   --font: 'Roboto', sans-serif;
   --font-weight: normal;
@@ -16,8 +16,8 @@
 }
 
 body {
+  background: radial-gradient(125% 125% at 50% 10%, #000 40%, #63e 100%);
   background-color: var(--main-background-color);
   color: var(--text-color);
   font-weight: var(--font-weight);
 }
-
