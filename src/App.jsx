@@ -8,7 +8,6 @@ import LogIn from "./Components/LogIn/index.jsx";
 import Contact from "./Components/Contact/Index.jsx";
 import Tos from "./Components/Tos/index.jsx";
 import DialogflowChat from "./Components/Chatbot/chatbot.jsx";
-
 function App() {
   return (
     <Router>

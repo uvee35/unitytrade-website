@@ -30,6 +30,11 @@ const Navbar = () => {
               Contact Us
             </Link>
           </li>
+          <li onClick={() => handleMenuClick("products")}>
+            <Link to="/products" className={menu === "contact" ? "active" : ""}>
+              Products
+            </Link>
+          </li>
           <div className="nav-login-cart">
             <Link to="/login">
               <button>Log In/Sign Up</button>
