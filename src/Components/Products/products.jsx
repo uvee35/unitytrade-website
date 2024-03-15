@@ -4,13 +4,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import "./productcard.css";
 
-
 function Products() {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [showCheckout, setShowCheckout] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
+
   useEffect(() => {
     const fetchProducts = async () => {
       const response = await axios.get("https://fakestoreapi.com/products");
@@ -18,31 +18,31 @@ function Products() {
     };
     fetchProducts();
   }, []);
+
   const addToCart = (product) => {
     setCart([...cart, product]);
   };
+
   const removeFromCart = (productId) => {
     setCart(cart.filter((product) => product.id !== productId));
   };
+
   const handleProductClick = (product) => {
     setSelectedProduct(product);
   };
+
   const handleCheckout = () => {
     setShowCheckout(true);
   };
+
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
-  const truncateDescription = (description) => {
-    const words = description.split(" ");
-    if (words.length > 10) {
-      return words.slice(0, 10).join(" ") + " ...";
-    }
-    return description;
-  };
+
   const filteredProducts = products.filter((product) =>
     product.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
   return (
     <div className="products-container">
       <div className="search-bar">
@@ -84,8 +84,10 @@ function Products() {
           {filteredProducts.map((product) => (
             <div key={product.id} className="product-card">
               <img src={product.image} alt={product.title} />
-              <h3>{product.title}</h3>
-              <p>{truncateDescription(product.description)}</p>
+              <div className="product-info">
+                <h3>{product.title}</h3>
+                <p>${product.price}</p>
+              </div>
               <button onClick={() => addToCart(product)}>Add to Cart</button>
             </div>
           ))}

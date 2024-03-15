@@ -1,85 +1,94 @@
 .products-container {
-    background-color: #fff;
-    color: #333;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  .search-bar {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  .search-bar input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  .search-bar input:focus {
-    outline: none;
-  }
-  .search-bar input::placeholder {
-    color: #999;
-  }
-  .search-bar svg {
-    margin-left: -30px;
-  }
-  .cart-icon {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-    color: #333;
-  }
-  .cart-count {
-    background-color: #007BFF;
-    color: #fff;
-    padding: 4px 8px;
-    border-radius: 50%;
-    font-size: 14px;
-  }
-  .product-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-  }
-  .product-card {
-    background-color: #F9F9F9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    height: 100%; /* Set a fixed height for each card */
-    display: flex;
-    flex-direction: column;
-  }
-  .product-card img {
-    width: 100%;
-    border-radius: 8px;
-    flex: 1; /* Let the image take up remaining space */
-  }
-  .product-card h3 {
-    font-weight: bold;
-    margin-top: 0; /* Remove default margin */
-  }
-  .product-card p {
-    margin-bottom: 10px;
-  }
-  .product-card button {
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .product-card button:hover {
-    background-color: #0056B3;
-  }
-  
-  
-  
-  
-  
-  
+  background-color: #fff;
+  color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+.search-bar input::placeholder {
+  color: #999;
+}
+
+.search-bar svg {
+  margin-left: -30px;
+}
+
+.cart-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  color: #333;
+}
+
+.cart-count {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 50%;
+  font-size: 14px;
+}
+/* Adjustments to the product card image size and grid layout */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust based on your preference */
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  max-width: 100%; /* Ensures image is not bigger than the card */
+  max-height: 200px; /* Adjust the height as needed */
+  object-fit: contain; /* Keeps the aspect ratio, might show some white space */
+  margin-bottom: 20px; /* Adds some space between the image and the product title */
+}
+
+/* Add or adjust styles for product title and price for better visibility */
+.product-card h3, .product-card p {
+  margin: 5px 0; /* Reduce margin to make the card more compact */
+}
+
+/* Adjust button styling if needed */
+.product-card button {
+  margin-top: auto; /* Aligns button to the bottom of the card if using flex */
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background-color: #0056b3;
+}
