@@ -1,83 +1,110 @@
 /* Navbar.css */
+
+/* Base styles */
 .navbar {
-  background-color: #215269; 
+  background-color: #215269;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
   padding: 16px;
   box-shadow: 0 1px 3px -2px black;
-  height: 200px;
+  margin: 0 auto;
 }
-.nav-logo{
+
+.nav-logo {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.nav-logo p{
-  color: #000000;
-  font-size: 38px;
+
+.nav-logo p {
+  color: #ffffff;
+  font-size: 24px;
   font-weight: 600;
 }
-.nav-menu{
+
+.nav-menu {
   display: flex;
-  align-items: center;
   list-style: none;
-  gap: 50px;
-  color: #000000;
-  font-size: 35px;
-  font-weight: 500;
+  gap: 20px;
+  color: white;
+  font-size: 18px;
 }
-.nav menu li{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 3px;
+
+.nav-menu li {
   cursor: pointer;
 }
-.nav-menu hr{
+
+.nav-menu li a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-menu hr {
   border: none;
   width: 80%;
-  height: 3px;
-  border-radius: 10px;
+  height: 2px;
+  border-radius: 5px;
   background: #6c3d3d;
 }
-.nav-login-cart{
-  display: flex;
-  align-items: center;
-  gap: 40px;
 
-}
-.nav-login -cart button{
-  width: 157px;
-  height: 58px;
-  outline: none;
-  border: 1px solid #7a7a7a;
-  border-radius: 75px;
-  color: #515151;
-  font-size: 20px;
-  font-weight: 500;
-  background: white;
+.nav-login-cart button {
+  width: 100px;
+  height: 40px;
+  background-color: #ffffff;
+  color: #215269;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
+  font-size: 16px;
+}
 
+.nav-login-cart button:hover {
+  background-color: #f0f0f0;
 }
-.nav-login -cart button:active{
-  background: #ba6f6f;
+
+.nav-login-cart img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
 }
-.nav-cart-count{
-  width: 22px;
-  height: 22px;
+
+.nav-cart-count {
+  width: 20px;
+  height: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -35px;
-  margin-left: -55px;
-  border-radius: 11px;
-  font-size: 14px;
-  background: red;
+  background-color: #215269;
   color: #ffffff;
+  border-radius: 50%;
+  font-size: 12px;
+  margin-left: 5px;
 }
 
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 8px;
+  }
 
+  .nav-logo {
+    margin-bottom: 16px;
+  }
 
+  .nav-menu {
+    flex-direction: column;
+    gap: 8px;
+  }
 
+  .nav-login-cart {
+    margin-top: 16px;
+  }
 
+  .nav-login-cart button {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+}
