@@ -19,6 +19,7 @@ const Navbar = () => {
             src={logo}
             alt="Logo"
             style={{ maxWidth: "200%", marginLeft: "50px" }}
+            className="logo-img"
           />
         </Link>
       </div>
