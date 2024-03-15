@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Im
 import Footer from "./Components/Footer/index.jsx";
 import "./App.css";
 import Navbar from "./Components/Navbar/Navbar.jsx";
-import HeroSection from "./Components/Hero/hero.jsx";
 import ShoppingPage from "./Components/ShoppingPage/index.jsx";
+import LogIn from "./Components/LogIn/index.jsx";
 import Contact from "./Components/Contact/Index.jsx";
 import DialogflowChat from "./Components/Chatbot/chatbot.jsx";
 
@@ -14,8 +14,8 @@ function App() {
       <div className="App">
         <Navbar />
         <Routes>
-          <Route path="/" element={<HeroSection />} />
-          <Route path="/shop" element={<ShoppingPage />} />
+          <Route path="/" element={<ShoppingPage />} />
+          <Route path="/Log-in" element={<LogIn />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
           <DialogflowChat />
