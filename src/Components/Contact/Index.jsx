@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ContactForm from '../ContactForm/index'
+import ContactForm from '../ContactForm/contactForm'
 import './Index.css'
 
 function Contact() {
