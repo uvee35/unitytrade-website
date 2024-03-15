@@ -7,6 +7,7 @@ import ShoppingPage from "./Components/ShoppingPage/index.jsx";
 import LogIn from "./Components/LogIn/index.jsx";
 import Contact from "./Components/Contact/Index.jsx";
 import Tos from "./Components/Tos/index.jsx";
+import PrivacyPolicy from "./Components/Privacy/index.jsx";
 import DialogflowChat from "./Components/Chatbot/chatbot.jsx";
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/Log-in" element={<LogIn />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/tos" element={<Tos />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
         </Routes>
           <DialogflowChat />
         <Footer />
