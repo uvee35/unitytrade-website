@@ -24,45 +24,19 @@ const Navbar = () => {
       </div>
       <div className="nav-links">
         <ul>
-          <li onClick={() => handleMenuClick("shop")}>
-            <Link to="/" className={menu === "shop" ? "active" : ""}>
-              Shop
-            </Link>
-          </li>
-          <li onClick={() => handleMenuClick("categories")}>
-            <Link
-              to="/categories"
-              className={menu === "categories" ? "active" : ""}
-            >
-              Categories
-            </Link>
-          </li>
-          <li onClick={() => handleMenuClick("sign in")}>
-            <Link to="/signin" className={menu === "sign in" ? "active" : ""}>
-              Sign in
-            </Link>
-          </li>
-          <li onClick={() => handleMenuClick("register")}>
-            <Link
-              to="/register"
-              className={menu === "register" ? "active" : ""}
-            >
-              Register
-            </Link>
-          </li>
           <li onClick={() => handleMenuClick("contact")}>
             <Link to="/contact" className={menu === "contact" ? "active" : ""}>
-              Contact
+              Contact Us
             </Link>
           </li>
+          <div className="nav-login-cart">
+            <Link to="/login">
+              <button>Log In/Sign Up</button>
+            </Link>
+            {/* Only display the cart icon once the user is logged in */}
+            {/* You can add logic here to conditionally render it */}
+          </div>
         </ul>
-      </div>
-      <div className="nav-login-cart">
-        <Link to="/login">
-          <button>Login</button>
-        </Link>
-        {/* Only display the cart icon once the user is logged in */}
-        {/* You can add logic here to conditionally render it */}
       </div>
     </div>
   );
