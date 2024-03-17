@@ -4,7 +4,7 @@ import Footer from "./Components/Footer/index.jsx";
 import "./App.css";
 import Navbar from "./Components/Navbar/Navbar.jsx";
 import ShoppingPage from "./Components/ShoppingPage/index.jsx";
-import LogIn from "./Components/LogIn/index.jsx";
+import LogIn from "./Components/Login/index.jsx";
 import Contact from "./Components/Contact/Index.jsx";
 import Tos from "./Components/Tos/index.jsx";
 import PrivacyPolicy from "./Components/Privacy/index.jsx";
@@ -21,7 +21,7 @@ function App() {
           <Route path="/tos" element={<Tos />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
         </Routes>
-          <DialogflowChat />
+        <DialogflowChat />
         <Footer />
       </div>
     </Router>
