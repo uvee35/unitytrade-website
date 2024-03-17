@@ -3,42 +3,33 @@ import Jewellery from "../src/assets/Images/jewellery.jpg";
 import Clothing from "../src/assets/Images/clothes.jpg";
 import tv from "../src/assets/Images/tv.jpg";
 import {
-  RxDesktop,
-  RxPencil2,
-  RxReader,
-  RxRocket,
-  RxAccessibility,
-} from "react-icons/rx";
+  faGem,
+  faTshirt,
+  faLaptopCode,
+  faTv,
+  faUserTie,
+  faIndustry,
+} from "@fortawesome/free-solid-svg-icons";
 
 export const ServiceData = [
   {
-    icon: RxRocket,
+    icon: faGem,
     title: "Jewellery",
-
     backgroundImage: Jewellery,
   },
   {
-    icon: RxPencil2,
+    icon: faTshirt,
     title: "Clothing",
     backgroundImage: Clothing,
   },
   {
-    icon: RxDesktop,
+    icon: faLaptopCode,
     title: "Technology",
-
     backgroundImage: Technology,
   },
   {
-    icon: RxReader,
+    icon: faTv,
     title: "Tv",
     backgroundImage: tv,
-  },
-  {
-    icon: RxAccessibility,
-    title: "Management",
-  },
-  {
-    icon: RxRocket,
-    title: "Production",
   },
 ];
