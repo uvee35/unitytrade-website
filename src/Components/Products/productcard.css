@@ -1,5 +1,5 @@
 .products-container {
-  background-color: #fff;
+
   color: #333;
   padding: 20px;
   border-radius: 8px;
@@ -47,10 +47,12 @@
   border-radius: 50%;
   font-size: 14px;
 }
+
 /* Adjustments to the product card image size and grid layout */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust based on your preference */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* Adjust based on your preference */
   gap: 20px;
   padding: 20px 0;
 }
@@ -67,20 +69,27 @@
 }
 
 .product-card img {
-  max-width: 100%; /* Ensures image is not bigger than the card */
-  max-height: 200px; /* Adjust the height as needed */
-  object-fit: contain; /* Keeps the aspect ratio, might show some white space */
-  margin-bottom: 20px; /* Adds some space between the image and the product title */
+  max-width: 100%;
+  /* Ensures image is not bigger than the card */
+  max-height: 200px;
+  /* Adjust the height as needed */
+  object-fit: contain;
+  /* Keeps the aspect ratio, might show some white space */
+  margin-bottom: 20px;
+  /* Adds some space between the image and the product title */
 }
 
 /* Add or adjust styles for product title and price for better visibility */
-.product-card h3, .product-card p {
-  margin: 5px 0; /* Reduce margin to make the card more compact */
+.product-card h3,
+.product-card p {
+  margin: 5px 0;
+  /* Reduce margin to make the card more compact */
 }
 
 /* Adjust button styling if needed */
 .product-card button {
-  margin-top: auto; /* Aligns button to the bottom of the card if using flex */
+  margin-top: auto;
+  /* Aligns button to the bottom of the card if using flex */
   padding: 10px 20px;
   background-color: #007bff;
   color: white;
