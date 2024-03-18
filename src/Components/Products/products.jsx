@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import "./productcard.css";
 
+
 function Products() {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
