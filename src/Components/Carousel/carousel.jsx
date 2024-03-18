@@ -9,7 +9,11 @@ import { ServiceData } from "../../constants"; // Adjust the import path as need
 
 const CarouselSlider = () => {
   return (
+   
     <div className="flex items-center justify-center flex-col h-[900px]">
+  <h1 style={{ fontSize: "60px", marginBottom: "40px", color: "white", textShadow: "0 0 10px rgba(0, 0, 0, 0.5)" }}>
+    Featured Categories
+  </h1>
       <Swiper
         breakpoints={{
           340: {
