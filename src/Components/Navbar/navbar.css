@@ -6,28 +6,31 @@
 }
 
 .logo-img:hover {
-  transform: scale(1.1); /* Increase the size by 10% on hover */
-  transition: transform 0.3s ease; /* Add a smooth transition effect */
+  transform: scale(1.1);
+
+  transition: transform 0.3s ease;
+
 }
 
 .nav-links ul {
   list-style-type: none;
   padding: 0;
   display: flex;
-  
+
+
 }
 
 .nav-links li {
   margin-right: 40px;
   margin-top: 9px;
-  
+
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #f6f6f6;
-  font-weight: bold;
-  font-size: 25px;
+  color: violet;
+
+  font-size: 20px;
 }
 
 .nav-links a:hover {

@@ -8,7 +8,7 @@ import "./navbar.css";
 import logo from "../../assets/Images/logo2.png";
 
 const Navbar = () => {
-  const [menu, setMenu] = useState("shop");
+  const [menu, setMenu] = useState("");
   const { user, isAuthenticated, isLoading } = useAuth0();
 
   const handleMenuClick = (menuItem) => {
@@ -40,7 +40,17 @@ const Navbar = () => {
       </div>
       <div className="nav-links">
         <ul>
-          {/* Links and other navbar items */}
+          <li onClick={() => handleMenuClick("home")}>
+            <Link to="/" className={menu === "home" ? "active" : ""}>
+              Home
+            </Link>
+          </li>
+
+          <li onClick={() => handleMenuClick("contact")}>
+            <Link to="/contact" className={menu === "contact" ? "active" : ""}>
+              Contact Us
+            </Link>
+          </li>
           <div className="nav-login-cart">
             {isAuthenticated ? (
               <>
