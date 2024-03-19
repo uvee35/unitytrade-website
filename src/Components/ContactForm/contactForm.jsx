@@ -53,7 +53,7 @@ const contactForm = () => {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
-      <button type="submit">Submit</button>
+      <button type="submit" className="contact-button">Submit</button>
     </form>
     </div>
     </div>
