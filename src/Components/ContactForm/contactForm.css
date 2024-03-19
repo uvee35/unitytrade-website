@@ -1,0 +1,55 @@
+.card {
+    max-width: 500px;
+    margin: 10px auto;
+    /* margin-top: 10px; */
+    padding-bottom: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+h1{
+    font-size: 30px !important;
+    font-weight: bolder !important;
+}
+
+h5{
+    margin-bottom: 20px !important;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the form horizontally */
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    margin-top: 10px !important;
+    width: 50%;
+    height: 40px;
+    border-radius: 4px !important;
+    padding: 10px;
+    background-color: #007bff !important;
+    color: #fff !important;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0f4986 !important;
+  }
+  
