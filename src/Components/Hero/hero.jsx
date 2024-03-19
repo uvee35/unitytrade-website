@@ -1,5 +1,5 @@
 import React from "react";
-import heroImage from "../../assets/Images/hero1.png";
+import heroImage from "../../assets/Images/hero3.png";
 import "./hero.css";
 
 const HeroSection = () => {
@@ -10,7 +10,7 @@ const HeroSection = () => {
           {/* Text on the left */}
           <div className="col-md-6 hero-text">
             <h1 className="clipped-text display-4">Welcome to Unity Trade</h1>
-            <p style={{color:"white"}}className="lead">
+            <p style={{ color: "white" }} className="lead">
               We are an e-commerce marketplace, offering a wide variety of
               products at competitive prices. Shop now and experience the
               convenience of online shopping with us..
