@@ -27,8 +27,9 @@
 
 .nav-links a {
   text-decoration: none;
-  color: violet;
-  font-size: 20px;
+  color: rgb(254, 243, 254);
+  font-size: 22px;
+  font-weight: bold;
 }
 
 .nav-links a:hover {
