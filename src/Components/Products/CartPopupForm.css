@@ -1,0 +1,93 @@
+.cart-popup {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    max-height: 80vh; /* Limit the maximum height of the cart popup */
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .cart-item-image {
+    width: 50px; /* Adjust the size of the image */
+    height: 50px; /* Adjust the size of the image */
+    margin-right: 10px;
+  }
+  
+  .cart-item-details {
+    flex: 1;
+  }
+  
+  .cart-item-name {
+    color: #333; /* Change the color of the product name */
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .cart-item-price {
+    color: #666; /* Change the color of the product price */
+    margin-bottom: 5px;
+  }
+  
+  .quantity-control {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .quantity-button {
+    background-color: #eee; /* Change the background color of the quantity buttons */
+    border: none;
+    color: #333; /* Change the color of the quantity buttons */
+    cursor: pointer;
+    padding: 5px;
+    font-size: 14px;
+  }
+  
+  .quantity {
+    margin: 0 10px;
+  }
+  
+  .remove-button {
+    background-color: #e24a4a; /* Change the background color of the remove button */
+    border: none;
+    color: #fff; /* Change the color of the remove button */
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 14px;
+    margin-right: 10px;
+    border-radius: 20px;
+  }
+  
+  .checkout-button {
+    background-color: #5532FA; /* Change the background color of the checkout button */
+    border: none;
+    color: #f2f1f5; /* Change the color of the checkout button */
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 20px;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #ff6666; /* Change the color of the close button */
+  }
+  

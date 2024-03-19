@@ -3,14 +3,13 @@ import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import "./productcard.css";
-
+import CartPopupForm from "./CartPopupForm";
 
 function Products() {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
-  const [selectedProduct, setSelectedProduct] = useState(null);
-  const [showCheckout, setShowCheckout] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
+  const [showCartPopup, setShowCartPopup] = useState(false);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -21,24 +20,59 @@ function Products() {
   }, []);
 
   const addToCart = (product) => {
-    setCart([...cart, product]);
+    const existingProduct = cart.find((item) => item.id === product.id);
+    if (existingProduct) {
+      const updatedCart = cart.map((item) =>
+        item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+      );
+      setCart(updatedCart);
+    } else {
+      setCart([...cart, { ...product, quantity: 1 }]);
+    }
   };
 
   const removeFromCart = (productId) => {
-    setCart(cart.filter((product) => product.id !== productId));
+    const updatedCart = cart.filter((item) => item.id !== productId);
+    setCart(updatedCart);
   };
 
-  const handleProductClick = (product) => {
-    setSelectedProduct(product);
+  const increaseQuantity = (productId) => {
+    const updatedCart = cart.map((item) =>
+      item.id === productId ? { ...item, quantity: item.quantity + 1 } : item
+    );
+    setCart(updatedCart);
+  };
+
+  const decreaseQuantity = (productId) => {
+    const updatedCart = cart.map((item) =>
+      item.id === productId && item.quantity > 1
+        ? { ...item, quantity: item.quantity - 1 }
+        : item
+    );
+    setCart(updatedCart);
   };
 
   const handleCheckout = () => {
-    setShowCheckout(true);
+    // Implement your checkout logic here
+    alert("Checkout functionality will be implemented here.");
   };
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
+
+  const toggleCartPopup = () => {
+    if (cart.length > 0) {
+      setShowCartPopup(!showCartPopup);
+    }
+  };
+
+  // Close cart popup if cart is empty
+  useEffect(() => {
+    if (cart.length === 0 && showCartPopup) {
+      setShowCartPopup(false);
+    }
+  }, [cart, showCartPopup]);
 
   const filteredProducts = products.filter((product) =>
     product.title.toLowerCase().includes(searchTerm.toLowerCase())
@@ -55,46 +89,34 @@ function Products() {
         />
         <FontAwesomeIcon icon={faSearch} />
       </div>
-      <div className="cart-icon" onClick={handleCheckout}>
+      <div className="cart-icon" onClick={toggleCartPopup}>
         <FontAwesomeIcon icon={faShoppingCart} />
         {cart.length > 0 && <span className="cart-count">{cart.length}</span>}
       </div>
-      {selectedProduct && (
-        <div>
-          <h2>{selectedProduct.title}</h2>
-          <img
-            src={selectedProduct.image}
-            alt={selectedProduct.title}
-            width="100"
-          />
-          <p>{selectedProduct.description}</p>
-          <button onClick={() => setSelectedProduct(null)}>
-            Back to Products
-          </button>
-        </div>
+      {showCartPopup && (
+        <CartPopupForm
+          cart={cart}
+          removeFromCart={removeFromCart}
+          increaseQuantity={increaseQuantity}
+          decreaseQuantity={decreaseQuantity}
+          handleCheckout={handleCheckout}
+          onClose={() => setShowCartPopup(false)}
+        />
       )}
-      {showCheckout ? (
-        <div>
-          <h2>Checkout</h2>
-          {/* Simplified Checkout Form */}
-          <p>Your order is ready. Implement checkout form here.</p>
-          <button onClick={() => setShowCheckout(false)}>Back to Cart</button>
-        </div>
-      ) : (
-        <div className="product-grid">
-          {filteredProducts.map((product) => (
-            <div key={product.id} className="product-card">
-              <img src={product.image} alt={product.title} />
-              <div className="product-info">
-                <h3>{product.title}</h3>
-                <p>${product.price}</p>
-              </div>
-              <button onClick={() => addToCart(product)}>Add to Cart</button>
+      <div className="product-grid">
+        {filteredProducts.map((product) => (
+          <div key={product.id} className="product-card">
+            <img src={product.image} alt={product.title} />
+            <div className="product-info">
+              <h3>{product.title}</h3>
+              <p>${product.price}</p>
             </div>
-          ))}
-        </div>
-      )}
+            <button onClick={() => addToCart(product)}>Add to Cart</button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
+
 export default Products;
