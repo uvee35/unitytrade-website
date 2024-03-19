@@ -1,0 +1,59 @@
+/* HeroSection.css */
+.hero-section {
+
+    background-color: transparent;
+
+}
+
+/* Style for the heading */
+.clipped-text {
+    font-family: 'Roboto', sans-serif;
+
+    font-weight: bold;
+    color: white;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-top: 170px;
+
+
+}
+
+/* Style for the button */
+.shop-button {
+    font-weight: bold;
+
+    color: white;
+
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+/* Hover effect for the button */
+.shop-button:hover {
+    background-color: #0056b3;
+
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.hero-image img {
+    animation: floatAnimation 3s ease-in-out infinite;
+}
