@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
+import "./contactForm.css";
 
 const contactForm = () => {
   const [name, setName] = useState("");
@@ -33,13 +34,19 @@ const contactForm = () => {
   };
 
   return (
+    <div className="card">
+      <div className="card-body text-center">
+      <h1 className='card-title'>New to Unity Trade?</h1>
+        <h5 className="card-info">Want to join our community of sellers or just want to ask some questions about the process? Click the button below and one of our team members will get back to you shortly.</h5>
     <form onSubmit={handleSubmit} className="contact-form">
+      <label htmlFor="name">Name:</label>
       <input
         type="text"
         placeholder="Name"
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
+      <label htmlFor="email">Email address:</label>
       <input
         type="email"
         placeholder="Email"
@@ -48,6 +55,8 @@ const contactForm = () => {
       />
       <button type="submit">Submit</button>
     </form>
+    </div>
+    </div>
   );
 };
 
