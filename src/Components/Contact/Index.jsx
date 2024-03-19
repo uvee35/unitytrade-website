@@ -5,7 +5,8 @@ import './Index.css'
 function Contact() {
  
 return (
-  <>
+  <div className='contact-body'>
+    <br></br>
   <ContactForm />
     
 <br></br>
@@ -20,7 +21,7 @@ return (
       </ul>
       
     </div>
-  </>
+  </div>
   )
 }
 
