@@ -43,10 +43,11 @@
   background-color: var(--button-color);
   color: #f6f6f6;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: 10px;
   padding: 8px 16px;
   transition: all 0.3s ease;
   margin-right: 20px;
+  font-size: 22px;
 }
 
 .nav-login-cart button:hover {
