@@ -16,6 +16,7 @@
     background-clip: text;
     margin-top: 170px;
 
+
 }
 
 /* Style for the button */
@@ -37,4 +38,22 @@
 .shop-button:hover {
     background-color: #0056b3;
 
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.hero-image img {
+    animation: floatAnimation 3s ease-in-out infinite;
 }
