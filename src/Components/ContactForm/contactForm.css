@@ -59,3 +59,9 @@ h5{
     background-color: #0f4986 !important;
   }
   
+  @media (max-width: 768px) {
+    .card-body {
+      margin: 10px !important;
+    }
+
+  }

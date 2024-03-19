@@ -1,6 +1,7 @@
 .contact-body{
     background-color: white;
     width: 90%;
+    max-width: 1500px;
     margin: 0 auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -30,4 +31,14 @@
 
 #email:hover{
    color: blue;
+}
+
+@media (max-width: 768px) {
+    .contact-body{
+        width: 100%;
+        max-width: none;
+    }
+.contact-info{
+    width: 100%;
+}
 }
