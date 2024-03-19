@@ -43,7 +43,7 @@ h5{
     border-radius: 4px;
   }
   
-  button {
+  .contact-button {
     margin-top: 10px !important;
     width: 50%;
     height: 40px;
