@@ -17,9 +17,10 @@ return (
       <br></br>
       <ul>
       <li>Phone: 123-456-7890</li>
-      <li>Email: <a href="mailto:0zP7d@example.com" id='email'>0zP7d@example.com</a></li>
+      <li>Email: <a href="mailto:0zP7d@example.com" id='email'>unitytradecs@gmail.com</a></li>
       </ul>
-      
+      <br></br>
+      <br></br>
     </div>
   </div>
   )

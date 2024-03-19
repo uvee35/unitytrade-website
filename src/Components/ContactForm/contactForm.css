@@ -21,6 +21,12 @@ h5{
     margin: 0 auto; /* Center the form horizontally */
   }
   
+  .label-left {
+    text-align: left; /* Align the label text to the left */
+    display: block; /* Ensure the label takes up the full width */
+    margin-bottom: 5px; /* Optional: Add some margin to separate the label and input */
+  }
+
   .form-group {
     margin-bottom: 15px;
   }
@@ -43,7 +49,7 @@ h5{
     height: 40px;
     border-radius: 4px !important;
     padding: 10px;
-    background-color: #007bff !important;
+    background-color: #6633EE !important;
     color: #fff !important;
     border: none;
     cursor: pointer;
