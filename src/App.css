@@ -16,7 +16,8 @@
 }
 
 body {
-  background: radial-gradient(125% 125% at 50% 10%, #1f1b1e 40%, #6633ee 100%);
+  background: linear-gradient(90deg, rgba(62, 62, 129, 1) 55%, rgba(18, 149, 176, 1) 100%);
+
   background-color: var(--main-background-color);
   color: var(--text-color);
   font-weight: var(--font-weight);
