@@ -2,6 +2,9 @@ import React from "react";
 import "./CartPopupForm.css"; // Import CSS file for styling
 
 function CartPopupForm({ cart, removeFromCart, increaseQuantity, decreaseQuantity, handleCheckout, onClose }) {
+  // Calculate total
+  const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2);
+
   return (
     <div className="cart-popup">
       <button className="close-button" onClick={onClose}>Close</button>
@@ -25,6 +28,8 @@ function CartPopupForm({ cart, removeFromCart, increaseQuantity, decreaseQuantit
           </div>
         </div>
       ))}
+      {/* Display total */}
+      <div className="total">Total: ${total}</div>
       {/* Render checkout button */}
       <button className="checkout-button" onClick={handleCheckout}>Checkout</button>
     </div>
