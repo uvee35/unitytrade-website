@@ -13,7 +13,7 @@ const HeroSection = () => {
             <p style={{ color: "white" }} className="lead">
               We are an e-commerce marketplace, offering a wide variety of
               products at competitive prices. Shop now and experience the
-              convenience of online shopping with us..
+              convenience of online shopping with us...
             </p>
             <button className="btn shop-button">Shop Now</button>{" "}
             {/* Updated text and class */}
