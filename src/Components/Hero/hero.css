@@ -8,15 +8,21 @@
 /* Style for the heading */
 .clipped-text {
     font-family: 'Roboto', sans-serif;
-
+    font-size: 65px !important;
     font-weight: bold;
-    color: white;
+    color: #e6d587;
 
     -webkit-background-clip: text;
     background-clip: text;
-    margin-top: 170px;
+    margin-top: 110px;
+    margin-bottom: 60px;
 
 
+}
+
+.lead {
+    font-size: 40px !important;
+    margin-bottom: 20px;
 }
 
 /* Style for the button */
@@ -25,7 +31,7 @@
 
     color: white;
 
-    background-color: #5532FA !important;
+    background-color: #e6d587 !important;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
