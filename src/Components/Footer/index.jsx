@@ -5,7 +5,7 @@ import './style.css';
 
 function Footer() {
     return (
-        <div className="footer-container">
+        <div className="footer-container py-3">
             <footer className='footertext'>
                 <div id='footerleft' className='col-8'>
                     © 2024 UnityTrade.com Ltd. |
