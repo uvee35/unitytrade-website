@@ -23,6 +23,12 @@ body {
   font-weight: var(--font-weight);
 }
 
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 /* Discount Banner */
 
 .discount-banner {
