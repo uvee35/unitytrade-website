@@ -1,7 +1,13 @@
+.footer-container {
+    display: flex;
+    flex-direction: column;
+}
+
 .footertext {
-    color: black;
-    height: 100px;
-    width: 100%;
+    border-top: 2px solid #6633ee;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
     display: flex;
     align-items: center;
 }
@@ -9,4 +15,10 @@
 #icon {
     font-size: 25px;
     margin: 0 10px;
+    transition: transform 0.2s ease-in-out;
 }
+
+#icon:hover {
+    transform: scale(1.2);
+}
+
