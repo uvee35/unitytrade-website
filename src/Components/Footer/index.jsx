@@ -5,15 +5,13 @@ import './style.css';
 
 function Footer() {
     return (
-        <div className="footer-container py-3">
+        <div className="footer-container py-1">
             <footer className='footertext'>
                 <div id='footerleft' className='col-8'>
                     © 2024 UnityTrade.com Ltd. |
                     <a href="/tos"> Terms of Use </a>
                     |
                     <a href="/privacy"> Privacy Policy </a>
-                    |
-                    <a href="/sitemap"> Site Map </a>
                     |
                     <a href="/contact"> Contact Us </a>
                 </div>
