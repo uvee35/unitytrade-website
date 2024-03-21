@@ -10,6 +10,8 @@ function Products() {
   const [cart, setCart] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [showCartPopup, setShowCartPopup] = useState(false);
+  const [categories, setCategories] = useState(["All", "Electronics", "Fashion", "Jewelery", "Beauty"]);
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -53,7 +55,6 @@ function Products() {
   };
 
   const handleCheckout = () => {
-    // Implement your checkout logic here
     alert("Checkout functionality will be implemented here.");
   };
 
@@ -62,58 +63,68 @@ function Products() {
   };
 
   const toggleCartPopup = () => {
-    if (cart.length > 0) {
-      setShowCartPopup(!showCartPopup);
-    }
+    setShowCartPopup(cart.length > 0 ? !showCartPopup : false);
   };
 
-  // Close cart popup if cart is empty
   useEffect(() => {
     if (cart.length === 0 && showCartPopup) {
       setShowCartPopup(false);
     }
-  }, [cart, showCartPopup]);
+  }, [cart.length, showCartPopup]);
 
   const filteredProducts = products.filter((product) =>
+    (selectedCategory === "All" || product.category.toLowerCase() === selectedCategory.toLowerCase()) &&
     product.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
-    <div className="products-container">
-      <div className="search-bar">
-        <input
-          type="text"
-          placeholder="Search products..."
-          value={searchTerm}
-          onChange={handleSearchChange}
-        />
-        <FontAwesomeIcon icon={faSearch} />
-      </div>
-      <div className="cart-icon" onClick={toggleCartPopup}>
-        <FontAwesomeIcon icon={faShoppingCart} />
-        {cart.length > 0 && <span className="cart-count">{cart.length}</span>}
-      </div>
-      {showCartPopup && (
-        <CartPopupForm
-          cart={cart}
-          removeFromCart={removeFromCart}
-          increaseQuantity={increaseQuantity}
-          decreaseQuantity={decreaseQuantity}
-          handleCheckout={handleCheckout}
-          onClose={() => setShowCartPopup(false)}
-        />
-      )}
-      <div className="product-grid">
-        {filteredProducts.map((product) => (
-          <div key={product.id} className="product-card">
-            <img src={product.image} alt={product.title} />
-            <div className="product-info">
-              <h3>{product.title}</h3>
-              <p>${product.price}</p>
-            </div>
-            <button onClick={() => addToCart(product)}>Add to Cart</button>
-          </div>
+    <div>
+      <h1 style={{ fontSize: "60px", marginBottom: "40px", color: "white", textShadow: "0 0 10px rgba(0, 0, 0, 0.5)" }}>
+    Our Products
+  </h1>
+      <div className="categories-nav" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0 10%' }}>
+        {categories.map((category) => (
+          <button key={category} onClick={() => setSelectedCategory(category)} style={{ flex: 1, textAlign: 'center' }}>
+            {category}
+          </button>
         ))}
+      </div>
+      <div className="products-container">
+        <div className="search-bar">
+          <input
+            type="text"
+            placeholder="Search products..."
+            value={searchTerm}
+            onChange={handleSearchChange}
+          />
+          <FontAwesomeIcon icon={faSearch} />
+        </div>
+        <div className="cart-icon" onClick={toggleCartPopup}>
+          <FontAwesomeIcon icon={faShoppingCart} />
+          {cart.length > 0 && <span className="cart-count">{cart.length}</span>}
+        </div>
+        {showCartPopup && (
+          <CartPopupForm
+            cart={cart}
+            removeFromCart={removeFromCart}
+            increaseQuantity={increaseQuantity}
+            decreaseQuantity={decreaseQuantity}
+            handleCheckout={handleCheckout}
+            onClose={() => setShowCartPopup(false)}
+          />
+        )}
+        <div className="product-grid">
+          {filteredProducts.map((product) => (
+            <div key={product.id} className="product-card">
+              <img src={product.image} alt={product.title} />
+              <div className="product-info">
+                <h3>{product.title}</h3>
+                <p>${product.price}</p>
+              </div>
+              <button onClick={() => addToCart(product)}>Add to Cart</button>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
