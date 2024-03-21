@@ -7,7 +7,7 @@ function Footer() {
     return (
         <div className="footer-container py-1">
             <footer className='footertext'>
-                <div id='footerleft' className='col-8'>
+                <div id='footerleft' className='col-md-8'>
                     © 2024 UnityTrade.com Ltd. |
                     <a href="/tos"> Terms of Use </a>
                     |
@@ -15,7 +15,7 @@ function Footer() {
                     |
                     <a href="/contact"> Contact Us </a>
                 </div>
-                <div id='footerright' className='text-end col-4'>
+                <div id='footerright' className='text-end col-md-4'>
                     <a href="https://www.facebook.com" target='_blank'> 
                         <FontAwesomeIcon icon={faFacebook} id='icon' style={{ color: 'dodgerblue', fontWeight: 'bolder' }} />
                     </a>
