@@ -91,7 +91,7 @@
   margin-top: auto;
   /* Aligns button to the bottom of the card if using flex */
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #6633ee!important;
   color: white;
   border: none;
   border-radius: 5px;
@@ -100,4 +100,41 @@
 
 .product-card button:hover {
   background-color: #0056b3;
+}
+
+/* button {
+  background-color: #6633ee !important;
+} */
+
+
+
+
+ h1 {
+
+ 
+  text-align: center;
+
+}
+
+/* Adjustments for category buttons */
+.categories-nav {
+  display: flex;
+  justify-content: space-around; 
+  align-items: center;
+  padding: 0 5%; 
+  margin-top: 20px;
+}
+
+.categories-nav button {
+  margin: 0 10px;
+  font-size: 1em; 
+  text-align: center;
+  background-color: #e6d587; 
+  color: rgb(11, 11, 11); 
+  border-radius: 9px; 
+  padding: 5px 5px; 
+  border: none; 
+  cursor: pointer; 
+  display: inline-block; /* Ensures the buttons don't stretch to fill the container */
+  white-space: nowrap; 
 }
