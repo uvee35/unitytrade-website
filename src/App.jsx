@@ -8,7 +8,7 @@ import LogIn from "./Components/Login/login.jsx";
 import Contact from "./Components/Contact/Index.jsx";
 import Tos from "./Components/Tos/index.jsx";
 import PrivacyPolicy from "./Components/Privacy/index.jsx";
-import DialogflowChat from "./Components/Chatbot/chatbot.jsx";
+import Checkout from "./Components/Products/Checkout.jsx"; // Import Checkout component
 
 function App() {
   return (
@@ -27,8 +27,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/tos" element={<Tos />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/checkout" element={<Checkout />} /> {/* Define route for Checkout */}
         </Routes>
-        <DialogflowChat />
         <Footer />
       </div>
     </Router>
