@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import "./productcard.css";
 import CartPopupForm from "./CartPopupForm";
+import { useNavigate } from "react-router-dom"; // Import useNavigate from react-router-dom
 
 function Products() {
   const [products, setProducts] = useState([]);
@@ -12,6 +13,7 @@ function Products() {
   const [showCartPopup, setShowCartPopup] = useState(false);
   const [categories, setCategories] = useState(["All", "Electronics", "Fashion", "Jewelery", "Beauty"]);
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const navigate = useNavigate(); // Initialize useNavigate hook
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -55,7 +57,8 @@ function Products() {
   };
 
   const handleCheckout = () => {
-    alert("Checkout functionality will be implemented here.");
+    // Navigate to the checkout page
+    navigate("/checkout");
   };
 
   const handleSearchChange = (event) => {
@@ -80,8 +83,8 @@ function Products() {
   return (
     <div>
       <h1 style={{ fontSize: "60px", marginBottom: "40px", color: "white", textShadow: "0 0 10px rgba(0, 0, 0, 0.5)" }}>
-    Our Products
-  </h1>
+        Our Products
+      </h1>
       <div className="categories-nav" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0 10%' }}>
         {categories.map((category) => (
           <button key={category} onClick={() => setSelectedCategory(category)} style={{ flex: 1, textAlign: 'center' }}>
@@ -109,7 +112,7 @@ function Products() {
             removeFromCart={removeFromCart}
             increaseQuantity={increaseQuantity}
             decreaseQuantity={decreaseQuantity}
-            handleCheckout={handleCheckout}
+            handleCheckout={handleCheckout} 
             onClose={() => setShowCartPopup(false)}
           />
         )}
